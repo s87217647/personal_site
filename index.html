@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Space | System Logs & Expeditions</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --muted-color: #8b949e;
+            --border-color: #30363d;
+            --card-bg: #161b22;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        h1 { margin-bottom: 0.5rem; }
+        
+        .subtitle {
+            color: var(--muted-color);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        .log-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .log-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .log-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .meta {
+            font-size: 0.85rem;
+            color: var(--muted-color);
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+        }
+
+        .tags {
+            margin-top: 0.75rem;
+        }
+
+        .tag {
+            display: inline-block;
+            font-family: ui-monospace, SFMono-Regular, monospace;
+            font-size: 0.75rem;
+            background: #21262d;
+            color: var(--accent-color);
+            padding: 0.1rem 0.5rem;
+            border-radius: 3px;
+            border: 1px solid var(--border-color);
+            margin-right: 0.4rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--muted-color);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>System Logs & Explorer Notes</h1>
+        <p class="subtitle">Software Engineering / Distributed Systems / Road Journeys</p>
+    </header>
+
+    <main>
+        <!-- Engineering Segment -->
+        <section>
+            <h2>[0] Engineering & Projects</h2>
+            
+            <div class="log-item">
+                <div class="log-header">
+                    <span class="log-title"><a href="#">Automated Workflow Orchestrator</a></span>
+                    <span class="meta">2026-06</span>
+                </div>
+                <p style="margin: 0;">An autonomous scheduling mechanism managing private synchronization tasks and state state verification pipelines using scheduled run environments.</p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">CI/CD</span>
+                    <span class="tag">Automation</span>
+                </div>
+            </div>
+
+            <div class="log-item">
+                <div class="log-header">
+                    <span class="log-title"><a href="#">Reinforcement Learning Canvas Application</a></span>
+                    <span class="meta">2026-03</span>
+                </div>
+                <p style="margin: 0;">A browser-native simulation layer testing continuous-space agent interactions in unstable environments using raw TypeScript vectors.</p>
+                <div class="tags">
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Reinforcement Learning</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel/Expedition Segment -->
+        <section>
+            <h2>[1] Expeditions & Field Logs</h2>
+            
+            <div class="log-item">
+                <div class="log-header">
+                    <span class="log-title">High Desert Route Isolation</span>
+                    <span class="meta">2024-12 // Barstow to Lone Pine, CA</span>
+                </div>
+                <p style="margin: 0;">Testing hardware reliability, cold-cranking performance, and local edge communications across the Highway 395 corridor under sudden thermal drops.</p>
+                <div class="tags">
+                    <span class="tag">Field Test</span>
+                    <span class="tag">Off-Grid</span>
+                </div>
+            </div>
+
+            <div class="log-item">
+                <div class="log-header">
+                    <span class="log-title">Midwest Hub Transit</span>
+                    <span class="meta">2024-08 // Chicago, IL</span>
+                </div>
+                <p style="margin: 0;">Observing dense urban grid layouts, heavy transit terminal data synchronization, and exploring local historic brick architectures.</p>
+                <div class="tags">
+                    <span class="tag">Urban Transit</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with plain text. Hosted on the global edge. Updated June 2026.</p>
+    </footer>
+
+</body>
+</html>

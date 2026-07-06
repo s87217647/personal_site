@@ -216,6 +216,94 @@ section {
   margin-top: 20px;
 }
 
+.professional-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.entry-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.entry-card {
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+}
+
+.entry-card h4 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entry-item {
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.entry-header strong {
+  display: block;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.entry-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.entry-company {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.entry-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.entry-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+
+.entry-date {
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.entry-description {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .panel {
   padding: 24px 26px;
   background: rgba(255, 253, 249, 0.86);

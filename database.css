@@ -1,0 +1,217 @@
+:root {
+  --bg: #ffffff;
+  --text: #37352f;
+  --text-muted: #787774;
+  --border: #e9e9e7;
+  --hover-bg: #f7f6f3;
+
+  /* Notion Badge Colors */
+  --tag-purple-bg: #f3e8fd; --tag-purple-text: #6b21a8;
+  --tag-blue-bg: #e0f2fe;   --tag-blue-text: #0369a1;
+  --tag-green-bg: #dcfce7;  --tag-green-text: #15803d;
+  --tag-amber-bg: #fef3c7;  --tag-amber-text: #b45309;
+  --tag-gray-bg: #f3f4f6;   --tag-gray-text: #4b5563;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  margin: 0;
+  padding: 2.5rem 1.5rem;
+}
+
+.project-hub {
+  max-width: 1000px;
+  margin: 20px 0 0;
+  padding: 24px 26px;
+  background: rgba(255, 253, 249, 0.86);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+}
+
+.hub-header {
+  margin-bottom: 1.5rem;
+}
+
+.hub-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hub-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* 1. Track Selector (Position Tabs) */
+.track-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.track-btn {
+  background: none;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.track-btn:hover {
+  color: var(--text);
+}
+
+.track-btn.active {
+  color: var(--text);
+  border-bottom-color: var(--text);
+  font-weight: 600;
+}
+
+/* 2. Secondary Tag Filters */
+.tag-filters {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-right: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tag-chip {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.24rem 0.54rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tag-chip:hover, .tag-chip.active {
+  filter: saturate(1.08);
+}
+
+.tag-chip.tag-all {
+  background: var(--tag-gray-bg);
+  color: var(--tag-gray-text);
+}
+
+.tag-chip.tag-cpp {
+  background: var(--tag-purple-bg);
+  color: var(--tag-purple-text);
+}
+
+.tag-chip.tag-python {
+  background: var(--tag-amber-bg);
+  color: var(--tag-amber-text);
+}
+
+.tag-chip.tag-linux {
+  background: var(--tag-blue-bg);
+  color: var(--tag-blue-text);
+}
+
+.tag-chip.tag-github {
+  background: var(--tag-green-bg);
+  color: var(--tag-green-text);
+}
+
+/* 3. Notion Table Grid */
+.notion-table-wrapper {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.notion-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  text-align: left;
+}
+
+.notion-table th {
+  background: #fafafa;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  font-size: 0.8rem;
+}
+.notion-table th:last-child { border-right: none; }
+
+.notion-table td {
+  padding: 0.75rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  vertical-align: middle;
+}
+.notion-table td:last-child { border-right: none; }
+.notion-table tr:last-child td { border-bottom: none; }
+
+.notion-table tbody tr {
+  transition: background 0.1s ease;
+}
+
+.notion-table tbody tr:hover {
+  background: var(--hover-bg);
+}
+
+/* Elements */
+.proj-title {
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.12rem 0.46rem;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-right: 0.35rem;
+  margin-bottom: 0.15rem;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+}
+
+.t-cpp { background: var(--tag-purple-bg); color: var(--tag-purple-text); }
+.t-rust { background: var(--tag-purple-bg); color: var(--tag-purple-text); }
+.t-parallel-processing { background: var(--tag-purple-bg); color: var(--tag-purple-text); }
+.t-python { background: var(--tag-amber-bg); color: var(--tag-amber-text); }
+.t-infra { background: var(--tag-blue-bg); color: var(--tag-blue-text); }
+.t-test { background: var(--tag-green-bg); color: var(--tag-green-text); }
+.t-tools { background: var(--tag-gray-bg); color: var(--tag-gray-text); }
+
+.link-btn {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.link-btn:hover { color: var(--text); }

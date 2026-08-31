@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swift Sheng | Project Hub</title>
+  <link rel="stylesheet" href="database.css">
+</head>
+<body>
+
+  <div class="project-hub" id="projects">
+    <div class="hub-header">
+      <h2 class="hub-title">🛠️ Projects</h2>
+      <!-- <p class="hub-subtitle">Filter work highlights by target engineering discipline or stack.</p> -->
+    </div>
+
+    <div class="tag-filters">
+      <span class="filter-label">Stack:</span>
+      <button class="tag-chip tag-all active" onclick="setTag('all', this)">All</button>
+      <button class="tag-chip tag-cpp" onclick="setTag('C++', this)">C++</button>
+      <button class="tag-chip tag-python" onclick="setTag('Python', this)">Python</button>
+      <button class="tag-chip tag-linux" onclick="setTag('Linux', this)">Linux</button>
+      <button class="tag-chip tag-github" onclick="setTag('GitHub Actions', this)">GitHub Actions</button>
+    </div>
+
+    <!-- 3. Table View -->
+    <div class="notion-table-wrapper">
+      <table class="notion-table">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Name</th>
+            <th style="width: 20%;">Tags</th>
+            <th style="width: 45%;"> </th>
+            <th style="width: 10%;">Link</th>
+          </tr>
+        </thead>
+        <tbody id="project-body">
+
+          <tr data-tags="C++,Linux">
+            <td class="proj-title">ASCII Renderer</td>
+            <td>
+              <span class="tag t-cpp">C++</span>
+              <span class="tag t-tools">Linux</span>
+            </td>
+            <td>3D barebone raycasting renderer that renders 3D object in terminal using ASCII characters</td>
+            <td><a href="https://github.com/s87217647/ASCII-Renderer" target="_blank" class="link-btn">GitHub ↗</a></td>
+          </tr>
+
+
+          <tr data-tags="C++,Linux">
+            <td class="proj-title">Rusted Zookeepr</td>
+            <td>
+              <span class="tag t-rust">Rust</span>
+              <span class="tag t-parallel-processing">Parallel-Processing</span>
+            </td>
+            <td>High performance single-write-multi-read distributed database protocol - Zookeeper in Rust</td>
+            <td><a href="https://github.com/s87217647/Rusted_Zookeeper" target="_blank" class="link-btn">GitHub ↗</a></td>
+          </tr>
+
+          <tr data-tags="Security, Linux">
+            <td class="proj-title">La Lua Protector</td>
+            <td>
+              <span class="tag t-rust">Security</span>
+              <span class="tag t-parallel-processing">Embedding</span>
+            </td>
+            <td>Strenthening Lua's security with zero trust retro security framework - Object Capability</td>
+            <td><a href="https://scholarworks.sjsu.edu/etd_projects/1508/" target="_blank" class="link-btn">SJSU ↗</a></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    let currentTag = 'all';
+
+    function setTag(tag, element) {
+      currentTag = tag;
+      document.querySelectorAll('.tag-chip').forEach(btn => btn.classList.remove('active'));
+      element.classList.add('active');
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const rows = document.querySelectorAll('#project-body tr');
+
+      rows.forEach(row => {
+        const rowTags = (row.getAttribute('data-tags') || '').split(',').map(tag => tag.trim());
+        const matchesTag = (currentTag === 'all') || rowTags.includes(currentTag);
+
+        row.style.display = matchesTag ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

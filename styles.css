@@ -251,6 +251,15 @@ section {
   border-radius: 16px;
   background: var(--bg-soft);
   border: 1px solid var(--line);
+  cursor: pointer;
+  transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.entry-item:hover,
+.entry-item:focus-within {
+  border-color: rgba(79, 70, 229, 0.35);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.04);
 }
 
 .entry-header {
@@ -300,8 +309,19 @@ section {
 
 .entry-description {
   margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
   color: var(--muted);
   line-height: 1.7;
+  transition: max-height 260ms ease, opacity 220ms ease, margin-top 220ms ease;
+}
+
+.entry-item:hover .entry-description,
+.entry-item:focus-within .entry-description {
+  max-height: 220px;
+  opacity: 1;
+  margin-top: 10px;
 }
 
 .panel {

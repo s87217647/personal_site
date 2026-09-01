@@ -200,6 +200,17 @@ body {
   line-height: 1.4;
 }
 
+
+
+/* Color only, doesn't  */
+
+.t-amber{ background: var(--tag-amber-bg); color: var(--tag-amber-text);}
+.t-purple{background: var(--tag-purple-bg); color: var(--tag-purple-text);}
+.t-blue { background: var(--tag-blue-bg); color: var(--tag-blue-text); }
+.t-green { background: var(--tag-green-bg); color: var(--tag-green-text); }
+.t-gray { background: var(--tag-gray-bg); color: var(--tag-gray-text); }
+
+
 .t-cpp { background: var(--tag-purple-bg); color: var(--tag-purple-text); }
 .t-rust { background: var(--tag-purple-bg); color: var(--tag-purple-text); }
 .t-parallel-processing { background: var(--tag-purple-bg); color: var(--tag-purple-text); }

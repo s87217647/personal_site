@@ -156,10 +156,10 @@
     <div class="tag-filters">
       <span class="filter-label">Stack:</span>
       <button class="tag-chip tag-all active" onclick="setTag('all', this)">All</button>
-      <button class="tag-chip tag-cpp" onclick="setTag('C++', this)">C++</button>
-      <button class="tag-chip tag-python" onclick="setTag('Python', this)">Python</button>
-      <button class="tag-chip tag-linux" onclick="setTag('Linux', this)">Linux</button>
-      <button class="tag-chip tag-github" onclick="setTag('GitHub Actions', this)">GitHub Actions</button>
+      <!-- <button class="tag-chip tag-cpp" onclick="setTag('C++', this)">C++</button> -->
+      <!-- <button class="tag-chip tag-python" onclick="setTag('Python', this)">Python</button> -->
+      <!-- <button class="tag-chip tag-linux" onclick="setTag('Linux', this)">Linux</button> -->
+      <!-- <button class="tag-chip tag-github" onclick="setTag('GitHub Actions', this)">GitHub Actions</button> -->
     </div>
 
     <!-- 3. Table View -->
@@ -175,18 +175,18 @@
         </thead>
         <tbody id="project-body">
 
-          <tr data-tags="C++,Linux">
+          <tr data-tags="C++, Computer Graphic">
             <td class="proj-title">ASCII Renderer</td>
             <td>
               <span class="tag t-cpp">C++</span>
-              <span class="tag t-tools">Linux</span>
+              <span class="tag t-tools">Computer Graphic</span>
             </td>
-            <td>3D barebone raycasting renderer that renders 3D object in terminal using ASCII characters</td>
+            <td>3D raycasting renderer that displays 3D mesh object in terminal using ASCII characters</td>
             <td><a href="https://github.com/s87217647/ASCII-Renderer" target="_blank" class="link-btn">GitHub ↗</a></td>
           </tr>
 
 
-          <tr data-tags="C++,Linux">
+          <tr data-tags="Rust, parallel-processing">
             <td class="proj-title">Rusted Zookeepr</td>
             <td>
               <span class="tag t-rust">Rust</span>
@@ -196,15 +196,25 @@
             <td><a href="https://github.com/s87217647/Rusted_Zookeeper" target="_blank" class="link-btn">GitHub ↗</a></td>
           </tr>
 
-          <tr data-tags="Security, Linux">
+          <tr data-tags="Security">
             <td class="proj-title">La Lua Protector</td>
             <td>
-              <span class="tag t-rust">Security</span>
-              <span class="tag t-parallel-processing">Embedding</span>
+              <span class="tag t-Security">Security</span>
+              <span class="tag t-Embedding">Embedding</span>
             </td>
             <td>Strenthening Lua's security with zero trust retro security framework - Object Capability</td>
             <td><a href="https://scholarworks.sjsu.edu/etd_projects/1508/" target="_blank" class="link-btn">SJSU ↗</a></td>
           </tr>
+
+          <tr data-tags="Deep-Learning">
+            <td class="proj-title">Deep Learning Hex Agent</td>
+            <td>
+              <span class="tag t-deep-learning">Deep Learning</span>
+            </td>
+            <td>Deep reinforcement learning HEX playing agent</td>
+            <td><a href="https://github.com/s87217647/Reinforcement_L/tree/main/hex" target="_blank" class="link-btn">GitHub ↗</a></td>
+          </tr>
+
 
         </tbody>
       </table>

@@ -79,7 +79,6 @@ nav {
   overflow: hidden;
   border: 1px solid rgba(229, 231, 235, 0.8);
   border-radius: 30px;
-  box-shadow: var(--shadow);
   background: url("graphics/flower1.webp") center/cover no-repeat;
   backdrop-filter: blur(12px);
   position: relative;
@@ -128,7 +127,11 @@ nav {
   flex-direction: column;
   justify-content: center;
   border-left: 1px solid rgba(229, 231, 235, 0.18);
-  background: transparent;
+  /* background: transparent; */
+  background: rgba(255, 253, 249, 0.4);
+  /* backdrop-filter: blur(16px); */
+  /* -webkit-backdrop-filter: blur(16px);*/
+  /* border-radius: 0 30px 30px 0; */
 }
 
 .hero-content h2 {
@@ -431,10 +434,59 @@ footer {
   text-align: center;
 }
 
+@media (max-width: 600px) {
+  .entry-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .entry-right {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; }
   .hero-content { border-left: 0; border-top: 1px solid rgba(229, 231, 235, 0.7); }
   .grid { grid-template-columns: 1fr; }
   .page { padding: 16px 14px 32px; }
   .hero-visual, .hero-content, .panel { padding: 20px; }
+    
+  .entry-description img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .entry-item {
+    word-break: break-word;
+    overflow: hidden;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centers items horizontally */
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: nowrap;      /* Prevents links from breaking into 2 rows */
+    justify-content: center; /* Keeps all links centered */
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;            /* Tightens gap to fit on small screens */
+    overflow-x: auto;       /* Safe fallback: horizontal scroll if screen is too narrow */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;      /* Slightly smaller text size so items fit comfortably */
+    white-space: nowrap;    /* Prevents individual link text from wrapping */
+    padding: 0.25rem 0.2rem;
+  }
 }

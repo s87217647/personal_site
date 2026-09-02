@@ -11,6 +11,12 @@
   --tag-green-bg: #dcfce7;  --tag-green-text: #15803d;
   --tag-amber-bg: #fef3c7;  --tag-amber-text: #b45309;
   --tag-gray-bg: #f3f4f6;   --tag-gray-text: #4b5563;
+  --tag-red-bg: #ffe4e6;     --tag-red-text: #9f1239;
+  --tag-pink-bg: #fce7f3;    --tag-pink-text: #9d174d;
+  --tag-orange-bg: #ffedd5;  --tag-orange-text: #c2410c;
+  --tag-teal-bg: #ccfbf1;    --tag-teal-text: #0f766e;
+  --tag-indigo-bg: #e0e7ff;  --tag-indigo-text: #3730a3;
+  --tag-cyan-bg: #cffaff;    --tag-cyan-text: #0e7490;
 }
 
 body {
@@ -142,12 +148,13 @@ body {
 /* 3. Notion Table Grid */
 .notion-table-wrapper {
   border: 1px solid var(--border);
-  border-radius: 6px;
-  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .notion-table {
   width: 100%;
+  min-width: 580px;
   border-collapse: collapse;
   font-size: 0.88rem;
   text-align: left;
@@ -202,13 +209,16 @@ body {
 
 
 
-/* Color only, doesn't  */
 
 .t-amber{ background: var(--tag-amber-bg); color: var(--tag-amber-text);}
 .t-purple{background: var(--tag-purple-bg); color: var(--tag-purple-text);}
 .t-blue { background: var(--tag-blue-bg); color: var(--tag-blue-text); }
 .t-green { background: var(--tag-green-bg); color: var(--tag-green-text); }
 .t-gray { background: var(--tag-gray-bg); color: var(--tag-gray-text); }
+.t-pink { background: var(--tag-pink-bg); color: var(--tag-pink-text); }
+.t-red { background: var(--tag-red-bg); color: var(--tag-red-text); }
+.t-orange { background: var(--tag-orange-bg); color: var(--tag-orange-text); }
+.t-teal { background: var(--tag-teal-bg); color: var(--tag-teal-text); }
 
 
 .t-cpp { background: var(--tag-purple-bg); color: var(--tag-purple-text); }
